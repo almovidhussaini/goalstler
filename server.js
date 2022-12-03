@@ -22,7 +22,7 @@ app.use('/api/user', require('./routes/userRoutes'))
 
 if(process.env.NODE_ENV=='production'){
 // app.use(express.static('build'))
-app.use(express.static(path.resolve(__dirname, '/build')));
+app.use(express.static(path.resolve(__dirname, './build')));
 // app.get('*',(req,res)=>res.sendFile(
 //         path.resolve(__dirname,'build','index.html')
 //     ));
@@ -34,7 +34,7 @@ app.use(express.static(path.resolve(__dirname, '/build')));
     });
 }
 else{
-    app.get('/',(req,res)=>res.send('please set to production'))
+    app.get('/',(req,res)=>res.send('please set to prduction'))
 }
 
 app.use(errorHandler)
