@@ -22,7 +22,9 @@ app.use('/api/user', require('./routes/userRoutes'))
 
 if(process.env.NODE_ENV=='production'){
 // app.use(express.static('build'))
+console.log('above error')
 app.use(express.static(path.resolve(__dirname, './build')));
+console.log('below error')
 // app.get('*',(req,res)=>res.sendFile(
 //         path.resolve(__dirname,'build','index.html')
 //     ));
