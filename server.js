@@ -32,7 +32,7 @@ console.log('below error')
 //     res.send(__dirname)
 // })
      app.get('*', (req, res) => {
-     res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+     res.sendFile(path.resolve(__dirname, './build', 'index.html'));
     });
 }
 else{
